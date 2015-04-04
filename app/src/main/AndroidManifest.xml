@@ -15,11 +15,7 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name"
-            android:windowSoftInputMode="adjustResize|stateVisible" >
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/title_activity_main" >
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,13 +23,22 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
             android:name=".OptionActivity"
             android:label="@string/title_activity_option" >
         </activity>
+<<<<<<< HEAD
         <activity
             android:name=".DefaultActivity"
             android:label="@string/title_activity_default" >
         </activity>
+=======
+
+
+>>>>>>> 4d06f31569f4da87ad6f35efd0baa973a3dd4216
     </application>
 
 </manifest>
