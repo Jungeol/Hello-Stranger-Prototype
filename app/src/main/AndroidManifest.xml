@@ -30,6 +30,10 @@
             android:name=".OptionActivity"
             android:label="@string/title_activity_option" >
         </activity>
+        <activity
+            android:name=".DefaultActivity"
+            android:label="@string/title_activity_default" >
+        </activity>
     </application>
 
 </manifest>
