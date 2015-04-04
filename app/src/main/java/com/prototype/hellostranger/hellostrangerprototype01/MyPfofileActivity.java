@@ -7,48 +7,30 @@ import android.view.View;
 import android.widget.ImageButton;
 
 
-public class OptionActivity extends ActionBarActivity implements View.OnClickListener{
-
-    static final int []BUTTONS = {
-            R.id.linked_person_btn,
-            R.id.my_profile_btn,
-            R.id.system_preference_btn
-    };
+public class MyPfofileActivity extends ActionBarActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_option);
+        setContentView(R.layout.activity_my_pfofile);
 
-        for(int btnId:BUTTONS) {
-            ImageButton img_btn= (ImageButton)findViewById(btnId);
-            img_btn.setOnClickListener(this);
-        }
+        ImageButton ep_btn= (ImageButton)findViewById(R.id.edit_profile_btn);
+        ep_btn.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v){
-        switch (v.getId()){
-            case R.id.linked_person_btn:
-                Intent lp_it = new Intent(this, LinkedPersonActivity.class);
-                startActivity(lp_it);
-                break;
-            case R.id.my_profile_btn:
-                Intent my_it = new Intent(this, MyPfofileActivity.class);
-                startActivity(my_it);
-                break;
-            case R.id.system_preference_btn:
-                /*Intent sp_it = new Intent(this,OptionActivity.class);
-                startActivity(sp_it);*/
-                break;
+        if(v.getId() == R.id.edit_profile_btn){
+            Intent ep_it = new Intent(this, EditProfileActivity.class);
+            startActivity(ep_it);
+            finish();
         }
     }
-
 
 /*    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_option, menu);
+        getMenuInflater().inflate(R.menu.menu_my_pfofile, menu);
         return true;
     }
 

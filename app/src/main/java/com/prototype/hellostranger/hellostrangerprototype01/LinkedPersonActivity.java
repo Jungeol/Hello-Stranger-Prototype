@@ -7,48 +7,36 @@ import android.view.View;
 import android.widget.ImageButton;
 
 
-public class OptionActivity extends ActionBarActivity implements View.OnClickListener{
-
-    static final int []BUTTONS = {
-            R.id.linked_person_btn,
-            R.id.my_profile_btn,
-            R.id.system_preference_btn
-    };
+public class LinkedPersonActivity extends ActionBarActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_option);
+        setContentView(R.layout.activity_linked_person);
 
-        for(int btnId:BUTTONS) {
-            ImageButton img_btn= (ImageButton)findViewById(btnId);
-            img_btn.setOnClickListener(this);
-        }
+        ImageButton reject_btn = (ImageButton) findViewById(R.id.reject_btn);
+        reject_btn.setOnClickListener(this);
+        ImageButton get_safe_num_btn = (ImageButton) findViewById(R.id.get_safe_number_btn);
+        get_safe_num_btn.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v){
         switch (v.getId()){
-            case R.id.linked_person_btn:
-                Intent lp_it = new Intent(this, LinkedPersonActivity.class);
-                startActivity(lp_it);
+            case R.id.reject_btn:
+                Intent rb_it = new Intent(this,PopupRejectActivity.class);
+                startActivity(rb_it);
                 break;
-            case R.id.my_profile_btn:
-                Intent my_it = new Intent(this, MyPfofileActivity.class);
-                startActivity(my_it);
-                break;
-            case R.id.system_preference_btn:
-                /*Intent sp_it = new Intent(this,OptionActivity.class);
-                startActivity(sp_it);*/
+            case R.id.get_safe_number_btn:
+                //
                 break;
         }
     }
 
-
 /*    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_option, menu);
+        getMenuInflater().inflate(R.menu.menu_linked_person, menu);
         return true;
     }
 
