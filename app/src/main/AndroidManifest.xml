@@ -14,8 +14,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".LoginActivity"
-            android:label="@string/app_name"
-            >
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,15 +29,24 @@
             android:name=".OptionActivity"
             android:label="@string/title_activity_option" >
         </activity>
-<<<<<<< HEAD
         <activity
-            android:name=".DefaultActivity"
-            android:label="@string/title_activity_default" >
+            android:name=".MyPfofileActivity"
+            android:label="@string/title_activity_my_pfofile" >
         </activity>
-=======
-
-
->>>>>>> 4d06f31569f4da87ad6f35efd0baa973a3dd4216
+        <activity
+            android:name=".EditProfileActivity"
+            android:label="@string/title_activity_edit_profile" >
+        </activity>
+        <activity
+            android:name=".LinkedPersonActivity"
+            android:label="@string/title_activity_linked_person" >
+        </activity>
+        <activity
+            android:name=".PopupRejectActivity"
+            android:label="@string/title_activity_popup_reject"
+            android:theme="@android:style/Theme.Dialog"
+            >
+        </activity>
     </application>
 
 </manifest>

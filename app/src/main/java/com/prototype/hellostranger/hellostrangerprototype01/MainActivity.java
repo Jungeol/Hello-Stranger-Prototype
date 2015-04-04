@@ -1,5 +1,6 @@
 package com.prototype.hellostranger.hellostrangerprototype01;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -15,15 +16,15 @@ public class MainActivity extends ActionBarActivity {
     int[] texts = {R.drawable.main_off_text, R.drawable.main_normal_text, R.drawable.main_finding_text, R.drawable.main_broken_text};
     ImageView heartImgView;
     ImageView textImgView;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        imgCount = 1;
+        imgCount = 0;
 
-
-        heartImgView = (ImageView)findViewById(R.id.haert_img_view);
-        textImgView = (ImageView)findViewById(R.id.text_img_view);
+        heartImgView = (ImageView) findViewById(R.id.haert_img_view);
+        textImgView = (ImageView) findViewById(R.id.text_img_view);
     }
 
     public void changeHeart(View v) {
@@ -35,12 +36,13 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
-    @Override
+   @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -51,6 +53,9 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent it = new Intent(this, OptionActivity.class);
+
+            startActivity(it);
             return true;
         }
 
