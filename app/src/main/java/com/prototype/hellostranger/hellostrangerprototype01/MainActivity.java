@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -33,6 +34,21 @@ public class MainActivity extends ActionBarActivity {
 
         heartImgView.setImageResource(hearts[imgCount]);
         textImgView.setImageResource(texts[imgCount]);
+
+        if(imgCount == 3){
+            Toast.makeText(getApplicationContext(), "마지막 페이지에 도달", Toast.LENGTH_SHORT).show();
+
+            try{
+                Thread.sleep(1000);
+                Intent intent = new Intent(getApplicationContext(), OptionActivity.class);
+                startActivity(intent);
+                finish();
+            } catch (InterruptedException e){
+                e.printStackTrace();
+            }
+
+        }
+
 
     }
 

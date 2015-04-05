@@ -1,9 +1,13 @@
 package com.prototype.hellostranger.hellostrangerprototype01;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
@@ -22,6 +26,18 @@ public class LoginActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        View decorView = getWindow().getDecorView();
+        // Hide the status bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+        // Remember that you should never show the action bar if the
+        // status bar is hidden, so hide that too if necessary.
+        /*ActionBar actionBar = getActionBar();
+        actionBar.hide();*/
+        
+
+
 
         final String fixedId = "hs";
         final String fixedPw = "hs";
@@ -42,8 +58,8 @@ public class LoginActivity extends ActionBarActivity {
                 Log.i("아이디", mUserId);
                 Log.i("비밀번호", mUserPw);
 
-                Toast.makeText(LoginActivity.this, "아이디: " + mUserId, Toast.LENGTH_SHORT).show();
-                Toast.makeText(LoginActivity.this, "비밀번호: " + mUserPw, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(LoginActivity.this, "아이디: " + mUserId, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(LoginActivity.this, "비밀번호: " + mUserPw, Toast.LENGTH_SHORT).show();
                 if ((mUserId != "") && (mUserPw != "")) {
                     if ((mUserId != fixedId) || (mUserPw != fixedPw)) {
                         Toast.makeText(LoginActivity.this, "아이디 혹은 비밀번호를 잘못 입력하셧습니다.", Toast.LENGTH_SHORT).show();
@@ -68,9 +84,12 @@ public class LoginActivity extends ActionBarActivity {
     }
 
 
-/*    @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+       MenuInflater inflater = getMenuInflater();
+        super.onCreateOptionsMenu(menu);
+
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
@@ -88,7 +107,7 @@ public class LoginActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }*/
+    }
 }
 
 

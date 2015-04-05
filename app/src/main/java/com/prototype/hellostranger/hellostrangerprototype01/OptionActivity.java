@@ -1,5 +1,6 @@
 package com.prototype.hellostranger.hellostrangerprototype01;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -7,9 +8,9 @@ import android.view.View;
 import android.widget.ImageButton;
 
 
-public class OptionActivity extends ActionBarActivity implements View.OnClickListener{
+public class OptionActivity extends ActionBarActivity implements View.OnClickListener {
 
-    static final int []BUTTONS = {
+    static final int[] BUTTONS = {
             R.id.linked_person_btn,
             R.id.my_profile_btn,
             R.id.system_preference_btn
@@ -20,15 +21,18 @@ public class OptionActivity extends ActionBarActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_option);
 
-        for(int btnId:BUTTONS) {
-            ImageButton img_btn= (ImageButton)findViewById(btnId);
+
+
+
+        for (int btnId : BUTTONS) {
+            ImageButton img_btn = (ImageButton) findViewById(btnId);
             img_btn.setOnClickListener(this);
         }
     }
 
     @Override
-    public void onClick(View v){
-        switch (v.getId()){
+    public void onClick(View v) {
+        switch (v.getId()) {
             case R.id.linked_person_btn:
                 Intent lp_it = new Intent(this, LinkedPersonActivity.class);
                 startActivity(lp_it);
