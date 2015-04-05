@@ -28,7 +28,8 @@ public class LinkedPersonActivity extends ActionBarActivity implements View.OnCl
                 startActivity(rb_it);
                 break;
             case R.id.get_safe_number_btn:
-                //
+                Intent gs_it = new Intent(this,GetSafeNumActivity.class);
+                startActivity(gs_it);
                 break;
         }
     }
