@@ -44,7 +44,6 @@
         <activity
             android:name=".PopupRejectActivity"
             android:label="@string/title_activity_popup_reject"
-            android:theme="@android:style/Theme.Dialog"
             >
         </activity>
     </application>

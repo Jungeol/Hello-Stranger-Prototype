@@ -2,7 +2,6 @@ package com.prototype.hellostranger.hellostrangerprototype01;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.view.Window;
 
 
 public class PopupRejectActivity extends ActionBarActivity {
@@ -11,7 +10,7 @@ public class PopupRejectActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //액티비티 타이틀 바 없애기
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);
         //setContentView(R.layout.activity_popup_reject);
 
 
@@ -21,7 +20,7 @@ public class PopupRejectActivity extends ActionBarActivity {
         layoutParams.flags = WindowManager.LayoutParams.FLAG_DIM_BEHIND;
         layoutParams.dimAmount=0.7f;
         getWindow().setAttributes(layoutParams);*/
-        setContentView(R.layout.activity_popup_reject);
+        setContentView(R.layout.activity_popup_reject2);
 
     }
 
