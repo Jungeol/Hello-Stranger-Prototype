@@ -27,6 +27,7 @@ public class LoginActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
         View decorView = getWindow().getDecorView();
         // Hide the status bar.
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
@@ -35,7 +36,7 @@ public class LoginActivity extends ActionBarActivity {
         // status bar is hidden, so hide that too if necessary.
         /*ActionBar actionBar = getActionBar();
         actionBar.hide();*/
-        
+
 
 
 
@@ -62,7 +63,7 @@ public class LoginActivity extends ActionBarActivity {
                 //Toast.makeText(LoginActivity.this, "비밀번호: " + mUserPw, Toast.LENGTH_SHORT).show();
                 if ((mUserId != "") && (mUserPw != "")) {
                     if ((mUserId != fixedId) || (mUserPw != fixedPw)) {
-                        Toast.makeText(LoginActivity.this, "아이디 혹은 비밀번호를 잘못 입력하셧습니다.", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(LoginActivity.this, "아이디 혹은 비밀번호를 잘못 입력하셧습니다.", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
                         finish();
@@ -73,7 +74,7 @@ public class LoginActivity extends ActionBarActivity {
                         finish();
                     }
                 } else {
-                    Toast.makeText(LoginActivity.this, "아이디 혹은 비밀번호를 제대로 입력해주세요", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(LoginActivity.this, "아이디 혹은 비밀번호를 제대로 입력해주세요", Toast.LENGTH_SHORT).show();
                 }
             }
 

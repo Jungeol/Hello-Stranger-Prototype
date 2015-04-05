@@ -15,9 +15,6 @@ public class LinkedPersonActivity extends ActionBarActivity implements View.OnCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_linked_person);
 
-        // 액션바 숨김
-        ActionBar actionBar = getActionBar();
-        actionBar.hide();
 
         ImageButton reject_btn = (ImageButton) findViewById(R.id.reject_btn);
         reject_btn.setOnClickListener(this);

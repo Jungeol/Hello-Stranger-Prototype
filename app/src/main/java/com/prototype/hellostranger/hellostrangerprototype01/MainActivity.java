@@ -29,25 +29,39 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void changeHeart(View v) {
-        imgCount = (++imgCount) % 4;
-        //int id = v.getId();
+        ++imgCount;
+        if(imgCount == 4) {
+            //Toast.makeText(getApplicationContext(), "마지막 페이지에 도달", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), OptionActivity.class);
+            startActivity(intent);
+        } else {
+            imgCount = imgCount % 4;
+            //int id = v.getId();
 
-        heartImgView.setImageResource(hearts[imgCount]);
-        textImgView.setImageResource(texts[imgCount]);
+            heartImgView.setImageResource(hearts[imgCount]);
+            textImgView.setImageResource(texts[imgCount]);
+        }
 
-        if(imgCount == 3){
-            Toast.makeText(getApplicationContext(), "마지막 페이지에 도달", Toast.LENGTH_SHORT).show();
+
+
+        /*if(imgCount == 4){
+            //Toast.makeText(getApplicationContext(), "마지막 페이지에 도달", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), OptionActivity.class);
+            startActivity(intent);
+
 
             try{
+
+
                 Thread.sleep(1000);
-                Intent intent = new Intent(getApplicationContext(), OptionActivity.class);
-                startActivity(intent);
-                finish();
+
+
+
             } catch (InterruptedException e){
                 e.printStackTrace();
             }
 
-        }
+        }*/
 
 
     }

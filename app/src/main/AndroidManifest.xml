@@ -45,7 +45,9 @@
             android:name=".PopupRejectActivity"
             android:label="@string/title_activity_popup_reject" >
         </activity>
-        <activity android:name=".TagActivity" >
+        <activity android:name=".TagActivity"
+            android:label="TagActivity">
+
         </activity>
         <activity
             android:name=".GetSafeNumActivity"

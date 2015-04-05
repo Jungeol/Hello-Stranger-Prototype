@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.ImageButton;
-
+import android.view.View.OnClickListener;
 
 public class OptionActivity extends ActionBarActivity implements View.OnClickListener {
 
@@ -21,9 +21,6 @@ public class OptionActivity extends ActionBarActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_option);
 
-
-
-
         for (int btnId : BUTTONS) {
             ImageButton img_btn = (ImageButton) findViewById(btnId);
             img_btn.setOnClickListener(this);
@@ -34,7 +31,7 @@ public class OptionActivity extends ActionBarActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.linked_person_btn:
-                Intent lp_it = new Intent(this, LinkedPersonActivity.class);
+                Intent lp_it = new Intent(getApplicationContext(), LinkedPersonActivity.class);
                 startActivity(lp_it);
                 break;
             case R.id.my_profile_btn:

@@ -12,9 +12,7 @@ public class EditProfileActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
 
-        // 액션바 숨김
-        ActionBar actionBar = getActionBar();
-        actionBar.hide();
+
     }
 
 
