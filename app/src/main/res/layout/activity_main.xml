@@ -1,15 +1,15 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    tools:context="com.prototype.hellostranger.hellostrangerprototype01.MainActivity">
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:gravity="center_horizontal"
+             tools:context="com.prototype.hellostranger.hellostrangerprototype01.MainActivity">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:src="@drawable/background" />
+        android:src="@drawable/background"/>
 
     <!-- 기본컨테이너 -->
     <LinearLayout
@@ -20,27 +20,28 @@
         android:orientation="vertical">
 
         <ImageView
+            android:id="@+id/haert_img_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="80dp"
             android:layout_marginRight="80dp"
             android:adjustViewBounds="true"
-            android:src="@drawable/main_off_heart"
             android:clickable="true"
             android:onClick="changeHeart"
-            android:id="@+id/haert_img_view"
+            android:src="@drawable/main_off_heart"
             />
+
         <ImageView
+            android:id="@+id/text_img_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="100dp"
             android:layout_marginLeft="80dp"
             android:layout_marginRight="80dp"
+            android:layout_marginTop="100dp"
             android:adjustViewBounds="true"
             android:src="@drawable/main_off_text"
-            android:id="@+id/text_img_view"
             />
     </LinearLayout>
 

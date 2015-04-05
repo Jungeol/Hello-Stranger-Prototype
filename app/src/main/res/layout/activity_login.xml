@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:src="@drawable/background" />
+        android:src="@drawable/background"/>
 
     <!-- Login progress -->
     <ProgressBar
@@ -95,6 +95,7 @@
                     android:maxLines="1"
 
                     android:singleLine="true"/>
+
                 <TextView
                     android:id="@+id/rv"
                     android:layout_width="wrap_content"
@@ -148,12 +149,13 @@
                     />
 
             </LinearLayout>
+
             <TextView
-                android:text="테스트용 다음페이지"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:clickable="true"
                 android:onClick="onClickNP"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:text="테스트용 다음페이지"/>
 
         </LinearLayout>
     </ScrollView>
