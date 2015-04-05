@@ -10,4 +10,5 @@
     <string name="title_activity_edit_profile">EditProfileActivity</string>
     <string name="title_activity_linked_person">LinkedPersonActivity</string>
     <string name="title_activity_popup_reject">PopupRejectActivity</string>
+    <string name="title_activity_get_safe_num">GetSafeNumActivity</string>
 </resources>
